@@ -12,7 +12,7 @@ export class TasksService {
   }
 
   getTaskById(id: string): Task {
-    return this.tasks.find(t => t.id === id);
+    return this.tasks.find((t) => t.id === id);
   }
 
   createTask({ title, description }: CreateTaskDto): Task {
@@ -38,8 +38,8 @@ export class TasksService {
   }
 
   deleteTask(id: string): Task {
-    const index = this.tasks.findIndex(t => t.id === id);
-    const [ task ] = this.tasks.splice(index, 1);
+    const index = this.tasks.findIndex((t) => t.id === id);
+    const [task] = this.tasks.splice(index, 1);
 
     return task;
   }
